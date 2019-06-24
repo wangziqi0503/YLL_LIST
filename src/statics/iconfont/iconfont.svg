@@ -1,0 +1,29 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<!--
+2013-9-30: Created.
+-->
+<svg>
+<metadata>
+Created by iconfont
+</metadata>
+<defs>
+
+<font id="iconfont" horiz-adv-x="1024" >
+  <font-face
+    font-family="iconfont"
+    font-weight="500"
+    font-stretch="normal"
+    units-per-em="1024"
+    ascent="896"
+    descent="-128"
+  />
+    <missing-glyph />
+    
+    <glyph glyph-name="qianwang" unicode="&#58880;" d="M511.998-128C229.231-128 0 101.23699999999997 0 384.002S229.23 895.994 511.998 895.994 1024 666.769 1024 384.002 794.763-128 511.998-128z m86.129 716.704H487.504l156.492-163.779H230.27v-81.869h413.725L487.504 179.26300000000003h110.623l195.629 204.712-195.63 204.729z"  horiz-adv-x="1024" />
+
+    
+
+
+  </font>
+</defs></svg>
