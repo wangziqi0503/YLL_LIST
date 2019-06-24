@@ -67,9 +67,8 @@ class Info extends PureComponent {
 
 
 const mapState = (state) => ({
-    status: state.getIn(['write', 'status']),
-    listinfo : state.getIn(['info', 'listinfo']),
-    writeinfo: state.getIn(['write', 'personnelList'])
+    status: state.getIn(['info', 'status']),
+    listinfo : state.getIn(['info', 'listinfo'])
 })
 
 const mapDispatch = (dispatch) => ({

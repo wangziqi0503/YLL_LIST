@@ -22,6 +22,10 @@ export default (state = defaultState, action) => {
                 listinfo: fromJS(action.list),
                 status: action.status
             });
+        case constants.CHECK_NO:
+            return state.merge({
+                status: action.status
+            });
         default :
             return state;
     }

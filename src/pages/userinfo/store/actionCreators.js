@@ -40,7 +40,13 @@ const ValueCheck = (name, tbaccount, phone, money) =>{
 
 export const addList = (name, tbaccount, phone, money) => {
         return (dispatch) => {
-           if(!ValueCheck(name, tbaccount, phone, money)) return false
+           if(!ValueCheck(name, tbaccount, phone, money)){
+                dispatch({
+                    type: constants.CHECK_NO,
+                    status: false
+                })
+               return false
+           }
             let endArr = [];
             const arrlist = [];
             const list = arrlist.concat({'name':name.value, 'phone':phone.value, 'money':money.value,'tbaccount': tbaccount.value,'yue': money.value});
@@ -62,16 +68,17 @@ export const addList = (name, tbaccount, phone, money) => {
 
 export const changeList = (index) =>{
     return (dispatch) => {
-    const history = JSON.parse(localStorage.getItem('List'));
-    const jine = Number(parseInt(history[index].money) / 10);
-    if(history[index].yue > 0 ){
-        history[index].yue = parseInt(history[index].yue) - jine;
-    }
+        const history = JSON.parse(localStorage.getItem('List'));
+        const jine = Number(parseInt(history[index].money) / 10);
+        if(history[index].yue > 0 ){
+            history[index].yue = parseInt(history[index].yue) - jine;
+        }
     
-    localStorage.setItem('List',JSON.stringify(history));
+        localStorage.setItem('List',JSON.stringify(history));
+        
         dispatch({
             type:constants.REMOVE_MONEY,
-            history:history
+            history: fromJS(history)
         }) 
     }
 } 
